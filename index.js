@@ -30,6 +30,27 @@ for (let i = 1; i <= 100; i++) {
 // Continuing with the example above, if n is equal to 4, your loop should log 5. Similarly, if n is 5, it should log 7, and if n is 9, it should log 11. Test your loop with higher numbers and reference an online prime number table to determine the accuracy of your code.
 // Be careful! If you set n to a number too large, your loop could take a long time to process.
 
+let n = 9;
+let i = n + 1
+
+while(true){
+    let isPrime = true;
+
+    for (let j = 2; j < i; j++){
+        if (i % j === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    
+    if(isPrime) {
+        console.log(`The next prime number after ${n} is ${i}`);
+        break;
+    }
+    i++;
+
+}
+
 // ============ Part 3: Feeling Loopy ============================
 // Your task is to write a script that accomplishes the following:
 // Loop through the characters of a given CSV string.
